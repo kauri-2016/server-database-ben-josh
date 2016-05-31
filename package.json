@@ -4,20 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "debug": "node-inspector & nodemon --debug server.js",
     "test": "tape tests.js",
     "init": "knex init",
     "migrate:make": "knex migrate:make",
     "migrate:latest": "knex migrate:latest",
     "migrate:rollback": "knex migrate:rollback",
     "seed:make": "knex seed:make",
-    "seed:run": "knex seed:run"
+    "seed:run": "knex seed:run",
+    "start": "nodemon"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-inspector": "^0.12.8",
+    "nodemon": "^1.9.2",
     "tape": "^4.5.1"
   },
   "dependencies": {
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "knex": "^0.11.5",
