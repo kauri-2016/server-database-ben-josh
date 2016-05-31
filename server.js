@@ -28,7 +28,7 @@ app.get('/getdata', routes.getdata)
 
 app.post('/searchFirstName', routes.searchFirstName)
 
-
+app.post('/addData', routes.addData)
 
 app.listen(3000, function () {
   console.log('Listening on 3000')
