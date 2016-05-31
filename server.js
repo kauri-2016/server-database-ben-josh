@@ -28,6 +28,8 @@ app.get('/getdata', routes.getdata)
 
 app.post('/searchFirstName', routes.searchFirstName)
 
+app.post('/update', routes.update)
+
 app.post('/addData', routes.addData)
 
 app.listen(3000, function () {
