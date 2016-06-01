@@ -35,6 +35,8 @@ app.post('/addData', routes.addData)
 
 app.post('/joinQuery', routes.joinQuery)
 
+app.post('/tripleSearch', routes.tripleSearch)
+
 app.listen(3000, function () {
   console.log('Listening on 3000')
 })

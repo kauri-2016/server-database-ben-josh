@@ -10,7 +10,8 @@ module.exports = {
   addData: addData,
   update: update,
   deleteUser: deleteUser,
-  joinQuery: joinQuery
+  joinQuery: joinQuery,
+  tripleSearch: tripleSearch
 }
 
 function getdata(req, res) {
@@ -140,11 +141,28 @@ function joinQuery(req, res) {
     .catch(function (error) {
       console.error(error)
     })
-
-
-
-
 }
+
+function tripleSearch(req, res) {
+  var userId = Number(req.body.ID)
+  knex('users')
+    .where({
+      profile_id: userId
+    })
+    .join('profile', 'users.profile_id', '=', 'profile.id')
+    .join('pets', 'users.profile_id', '=', 'pets.id')
+    .select('users.firstName', 'profile.nickName', 'pets.name', 'pets.type', 'pets.breed', 'pets.age')
+    .then(function (response) {
+      var model = {
+        people: response
+      }
+      res.render('tripleSearch', model)
+    })
+    .catch(function (error) {
+      console.error(error)
+    })
+}
+
 
 function table2(req, res) {
   var userFirstName = req.body.firstName

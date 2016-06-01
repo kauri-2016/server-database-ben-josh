@@ -1,0 +1,50 @@
+<h4>Triple Search Results</h4>
+
+<table border="1">
+  <tr>
+    <td>
+      First Name:
+    </td>
+    <td>
+      Nickname:
+    </td>
+    <td>
+      Pet name:
+    </td>
+    <td>
+      Pet Type:
+    </td>
+    <td>
+      Breed:
+    </td>
+    <td>
+      Age:
+    </td>
+  </tr>
+  {{#each people}}
+  <tr>
+    <td>
+      {{firstName}}
+    </td>
+    <td>
+      {{nickName}}
+    </td>
+    <td>
+      {{name}}
+    </td>
+    <td>
+      {{type}}
+    </td>
+    <td>
+      {{breed}}
+    </td>
+    <td>
+      {{age}}
+    </td>
+  </tr>
+  {{/each}}
+</table>
+
+<form action="http://localhost:3000/" method="get">
+    <button>Home</button>
+</form>

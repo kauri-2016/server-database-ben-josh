@@ -8,7 +8,8 @@ knex('users')
     profile_id: 1
   })
   .join('profile', 'users.profile_id', '=', 'profile.id')
-  .select('users.firstName', 'profile.nickName', 'profile.lucky_number')
+  .join('pets', 'users.profile_id', '=', 'pets.id')
+  .select('users.firstName', 'profile.nickName', 'pets.name', 'pets.type', 'pets.breed', 'pets.age')
   .then(function (response) {
     console.log(response)
   })

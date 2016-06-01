@@ -5,7 +5,9 @@ exports.up = function (knex, Promise) {
       table.string('firstName')
       table.string('lastName')
       table.string('username')
-      table.integer('profile_id').references('profile.id')
+      table.integer('profile_id')
+        .references('profile.id')
+        .references('pets.id')
     }),
     knex.schema.createTableIfNotExists('profile', function (table) {
       table.increments('id').primary()
