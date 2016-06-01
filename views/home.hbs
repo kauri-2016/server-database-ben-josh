@@ -1,12 +1,42 @@
+<div class="forms">
 
-<form action="http://localhost:3000/getdata" method="get">
-  <button>Display All Data</button>
+        <div class="getDataButton">
+
+        <form action="/getdata"method="get">
+          <button>Display All Data</button>
+        </form>
+
+      </div>
+
+
+
+
+
+<div class="SearchLastNameButton border">
+  <form class="searchFirstNameButton" action="http://localhost:3000/searchFirstName" method="post">
+    <input name="last" value="">
+    <button>Search by last name</button>
+  </form>
+</div>
+
+
+<div class="JoinQueryButton">
+
+
+<form action="http://localhost:3000/joinQuery" method="post">
+  <input name="ID" value="">
+  <button>Join Query by ID</button>
 </form>
 
-<form action="http://localhost:3000/searchFirstName" method="post">
-  <input name="last" value="">
-  <button>Search by last name</button>
+</div>
+<div class="petDetailsButton">
+
+<form action="http://localhost:3000/tripleSearch" method="post">
+  <input name="ID" value="">
+  <button>Get pet details by user ID</button>
 </form>
+</div>
+<div class="newRecordButton">
 
 <form action="http://localhost:3000/addData" method="post">
   <input name="firstName" value="First Name">
@@ -14,13 +44,5 @@
   <input name="username" value="Username">
   <button>Add new record</button>
 </form>
-
-<form action="http://localhost:3000/joinQuery" method="post">
-  <input name="ID" value="">
-  <button>Join Query by ID</button>
-</form>
-
-<form action="http://localhost:3000/tripleSearch" method="post">
-  <input name="ID" value="">
-  <button>Get pet details by user ID</button>
-</form>
+</div>
+</div>

@@ -17,6 +17,7 @@ app.engine('hbs', hbs({
   defaultLayout: 'main'
 }))
 
+app.use(express.static('public'))
 
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
