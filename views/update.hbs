@@ -1,1 +1,38 @@
-<h1>Welcome to add Data</h1>
+<h4>New Table</h4>
+
+<table border="1">
+  <tr>
+    <td>
+      ID:
+    </td>
+    <td>
+      First Name:
+    </td>
+    <td>
+      Last Name:
+    </td>
+    <td>
+      Username:
+    </td>
+  </tr>
+  {{#each people}}
+  <tr>
+    <td>
+      {{id}}
+    </td>
+    <td>
+      {{firstName}}
+    </td>
+    <td>
+      {{lastName}}
+    </td>
+    <td>
+      {{username}}
+    </td>
+  </tr>
+  {{/each}}
+</table>
+
+<form action="http://localhost:3000/" method="get">
+    <button>Home</button>
+</form>

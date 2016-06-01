@@ -29,8 +29,11 @@ app.get('/getdata', routes.getdata)
 app.post('/searchFirstName', routes.searchFirstName)
 
 app.post('/update', routes.update)
+app.post('/delete', routes.deleteUser)
 
 app.post('/addData', routes.addData)
+
+app.post('/joinQuery', routes.joinQuery)
 
 app.listen(3000, function () {
   console.log('Listening on 3000')

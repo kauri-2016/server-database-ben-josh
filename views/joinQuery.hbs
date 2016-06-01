@@ -1,5 +1,4 @@
-
-<h4>Data</h4>
+<h4>Join Query Results</h4>
 
 <table border="1">
   <tr>
@@ -25,19 +24,14 @@
       {{firstName}}
     </td>
     <td>
-      {{lastName}}
+      {{nickName}}
     </td>
     <td>
-      {{username}}
+      {{lucky_number}}
     </td>
   </tr>
   {{/each}}
 </table>
-
-<form action="http://localhost:3000/delete" method="post">
-  <input name="id" value={{id}}>
-    <button>Delete by ID</button>
-</form>
 
 <form action="http://localhost:3000/" method="get">
     <button>Home</button>

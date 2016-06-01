@@ -2,22 +2,24 @@ exports.seed = function (knex, Promise) {
   return Promise.join(
     // Deletes ALL existing entries
     knex('users').del(),
-
     // Inserts seed entries
     knex('users').insert({
       firstName: 'J',
       lastName: 'Jacobsen',
-      username: 'JiJi'
+      username: 'JiJi',
+      profile_id: 1
     }),
     knex('users').insert({
       firstName: 'Ben',
       lastName: 'Drydan',
-      username: 'Dry'
+      username: 'Dry',
+      profile_id: 2
     }),
     knex('users').insert({
       firstName: 'Ricky',
       lastName: 'Kynd',
-      username: 'RK'
+      username: 'RK',
+      profile_id: 3
     }),
     knex('users').insert({
       firstName: 'Steph',
@@ -39,5 +41,6 @@ exports.seed = function (knex, Promise) {
       lastName: 'Kala',
       username: 'AK'
     })
+
   );
 };
